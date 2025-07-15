@@ -1,0 +1,25 @@
+
+ * @param {number} n
+ * @return {string[]}
+ */
+var fizzBuzz = function(n) {
+    let fizzBuzz = []
+    for (let i = 1; i <= n; i ++){
+        let value = ""
+        if(i % 3 === 0){
+            value += "Fizz"
+        }
+
+        if(i % 5 === 0) {
+            value += "Buzz"
+        }
+
+        if(!value){
+            value += i
+        }
+
+        fizzBuzz.push(value)
+    }
+
+    return fizzBuzz
+};
