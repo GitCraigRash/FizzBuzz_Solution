@@ -1,0 +1,33 @@
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var fizzBuzz = function(n) {
+    var fizz = 0
+    var buzz = 0
+    var count = 0
+    var array = []
+    while (count !== n){
+        fizz += 1;
+        buzz += 1;
+        count +=1;
+        if (fizz === 3 && buzz === 5){
+            fizz = 0;
+            buzz = 0;
+            array.push("FizzBuzz")
+            continue;
+        };
+        if (buzz === 5) {
+            buzz = 0;
+            array.push("Buzz");
+            continue;
+        };
+        if (fizz === 3) {
+            fizz = 0;
+            array.push("Fizz");
+            continue;
+        };
+        array.push(String(count));
+    };
+    return array
+};
